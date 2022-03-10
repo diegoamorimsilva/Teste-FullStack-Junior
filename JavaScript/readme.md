@@ -18,3 +18,12 @@ das pessoas de entrada, cuja as idades sejam números pares ou ímpares, respect
 imprima no console a quantidade de nomes em "nomesIdadePar" da resposta,
 a quantidade de nomes em "nomesIdadeImpar" da resposta, bem como os nomes em cada
 um dos arrays, ordenados alfabeticamente de forma crescente.
+* Saidas esperadas
+~~~Javascript
+// imprimir no console a quantidade de nomes de pessoas com idade par. Saída esperada: 7
+// imprimir no console a quantidade de nomes de pessoas com idade impar. Saída esperada: 7
+// imprimir no console a os nomes de pessoas com idade par ordenados alfabeticamente. Saída esperada: 
+ˋ['Adriana', 'Bruno', 'Claudio', 'Flavia', 'Jaison', 'Marcia', 'Rafael']ˋ
+// imprimir no console a os nomes de pessoas com idade ímpar ordenados alfabeticamente. Saída esperada:
+ˋ['Ambrosina', 'André', 'Brenda', 'Carlinhos', 'Edenilson', 'José', 'Nivea']ˋ
+~~~
