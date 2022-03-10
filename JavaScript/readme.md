@@ -23,7 +23,7 @@ um dos arrays, ordenados alfabeticamente de forma crescente.
 // imprimir no console a quantidade de nomes de pessoas com idade par. Saída esperada: 7
 // imprimir no console a quantidade de nomes de pessoas com idade impar. Saída esperada: 7
 // imprimir no console a os nomes de pessoas com idade par ordenados alfabeticamente. Saída esperada: 
-ˋ['Adriana', 'Bruno', 'Claudio', 'Flavia', 'Jaison', 'Marcia', 'Rafael']ˋ
+['Adriana', 'Bruno', 'Claudio', 'Flavia', 'Jaison', 'Marcia', 'Rafael']
 // imprimir no console a os nomes de pessoas com idade ímpar ordenados alfabeticamente. Saída esperada:
-ˋ['Ambrosina', 'André', 'Brenda', 'Carlinhos', 'Edenilson', 'José', 'Nivea']ˋ
+['Ambrosina', 'André', 'Brenda', 'Carlinhos', 'Edenilson', 'José', 'Nivea']
 ~~~
