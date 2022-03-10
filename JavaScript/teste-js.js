@@ -76,11 +76,27 @@ const pessoas = [
   }
 ];
 
-// TODO implementar função assíncrona e anônima separarPorIdade
+// Divide os nomes por paridade do atributo idade
+let separarPorIdade = async function(pessoas) {
+  let nomesIdadePar = [];
+  let nomesIdadeImpar = [];
+  for (let i = 0; i < pessoas.length; i++) {
+    if (pessoas[i].idade % 2 == 0) {
+      nomesIdadePar.push(pessoas[i].nome);
+    } else {
+      nomesIdadeImpar.push(pessoas[i].nome);
+    }
+  }
+  return {
+    nomesIdadePar,
+    nomesIdadeImpar
+  };
+};
 
+//Resposta
 separarPorIdade(pessoas).then((resposta) => {
-  // TODO imprimir no console a quantidade de nomes de pessoas com idade par. Saída esperada: 7
-  // TODO imprimir no console a quantidade de nomes de pessoas com idade impar. Saída esperada: 7
-  // TODO imprimir no console a os nomes de pessoas com idade par ordenados alfabeticamente. Saída esperada: ['Adriana', 'Bruno', 'Claudio', 'Flavia', 'Jaison', 'Marcia', 'Rafael']
-  // TODO imprimir no console a os nomes de pessoas com idade ímpar ordenados alfabeticamente. Saída esperada: ['Ambrosina', 'André', 'Brenda', 'Carlinhos', 'Edenilson', 'José', 'Nivea']
+  console.log(`Nomes em nomesIdadePar: ${resposta.nomesIdadePar.length}`);
+  console.log(`Nomes em nomesIdadeImpar: ${resposta.nomesIdadeImpar.length}`);
+  console.log(`Nomes em nomesIdadePar: ${resposta.nomesIdadePar.sort()}`);
+  console.log(`Nomes em nomesIdadeImpar: ${resposta.nomesIdadeImpar.sort()}`);
 });

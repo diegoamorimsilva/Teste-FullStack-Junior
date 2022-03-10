@@ -15,18 +15,34 @@
       $this->eventos = $eventos;
     }
 
-    // TODO implementar o método "imprimirJsonEventosDiaOrdenados" da AgendaInterface
-    // o faça utilizar o método privado filtrarEventosDia que você implementou para
-    // obter os eventos do dia; para ordená los use a função nativa usort https://www.php.net/manual/en/function.usort
-    // com uma closure para comparação; retorne uma string json com um array de
-    // eventos formatados pelo método getEstadoEmArrayAssociativo na classe Evento
-
-
-
-    private function filtrarEventosDia($dataHoraDia){
-      // TODO implementar o método que filtrará os eventos do estado da Agenda,
-      // retornando apenas os da data informada por parâmetro - sem alterar o estado
-      // do objeto Agenda
+  
+    /**
+     *Filtra os eventos por dia e retorna um array de eventos.
+     *@param  string $dataHoraDia Informações do dia.
+     *@return array $eventosJson Array de eventos.
+     */
+    public function imprimirJsonEventosDiaOrdenados($dataHoraDia){
+      $eventosDia = $this->filtrarEventosDia($dataHoraDia);
+      usort($eventosDia, function($a, $b){
+        return $a->getDataHora() <=> $b->getDataHora();
+      });
+      $eventosJson = [];
+      foreach($eventosDia as $evento){
+        $eventosJson[] = $evento->getEstadoEmArrayAssociativo();
+      }
+      return json_encode($eventosJson);
     }
+
+    /* Método que filtra os eventos por dia.*/
+    private function filtrarEventosDia($dataHoraDia){
+      $eventosDia = [];
+      foreach($this->eventos as $evento){
+        if($evento->getDataHora()->format('Y-m-d') == $dataHoraDia){
+          $eventosDia[] = $evento;
+        }
+      }
+      return $eventosDia;
+    }
+
   }
 ?>
